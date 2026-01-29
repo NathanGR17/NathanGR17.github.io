@@ -1,10 +1,58 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Miniweb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | NathanGR17</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 </head>
 <body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Esta es la web de NathanGR17 en GitHub Pages.</p>
+    <main class="container">
+        
+        <header>
+            <hgroup>
+                <h1>Nathan (Tu Apellido)</h1>
+                <p>Breve descripción de tu perfil profesional</p>
+            </hgroup>
+            <p>📍 Ciudad, País | 📞 +34 000 000 000</p>
+        </header>
+
+        <hr>
+
+        <section id="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <article>
+                <header><strong>Nombre del Puesto</strong> | Empresa</header>
+                <small>Mes Año – Actualidad</small>
+                <ul>
+                    <li>Logro o tarea principal que realizaste.</li>
+                    <li>Otra responsabilidad clave.</li>
+                </ul>
+            </article>
+            
+            <article>
+                <header><strong>Puesto Anterior</strong> | Empresa Anterior</header>
+                <small>Mes Año – Mes Año</small>
+                <p>Descripción breve de tu paso por esta empresa.</p>
+            </article>
+        </section>
+
+        <section id="estudios">
+            <h2>Estudios</h2>
+            <article>
+                <header><strong>Nombre del Grado o Curso</strong></header>
+                <p>Institución Educativa | <em>En curso</em></p>
+            </article>
+        </section>
+
+        <footer class="container">
+            <h2>Contacto</h2>
+            <div style="display: flex; gap: 20px;">
+                <a href="https://www.linkedin.com/in/TU_USUARIO" role="button" class="contrast">LinkedIn</a>
+                <a href="mailto:tuemail@ejemplo.com" role="button" class="secondary">Enviar Email</a>
+            </div>
+        </footer>
+
+    </main>
 </body>
 </html>
