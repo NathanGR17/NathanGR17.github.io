@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | NathanGR17</title>
+    <title>CV | Nathan García Ramos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root { --spacing: 1.5rem; }
+        header { padding: 2.5rem 0; }
+        .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+        .skill-badge { background: #374151; color: white; padding: 4px 10px; border-radius: 5px; font-size: 0.85rem; margin-right: 5px; }
+        hr { margin: 2rem 0; }
+    </style>
 </head>
 <body>
     <main class="container">
@@ -12,44 +19,84 @@
         <header>
             <hgroup>
                 <h1>Nathan García Ramos</h1>
-                <p>Breve descripción de tu perfil profesional</p>
+                <p>3rd-year Computer Engineering Student</p>
             </hgroup>
-            <p>📍 Badalona, Barcelona | 📞 +34 691 013 297</p>
+            <p>
+                Hybrid profile combining technical rigor with excellent interpersonal skills[cite: 3]. 
+                Proactive learner with communicative fluency in international environments[cite: 4]. 
+                Currently expanding my technical stack with <strong>HTML and GitHub</strong> through hands-on projects.
+            </p>
+            <div class="contact-links">
+                <span>📍 Barcelona, Spain [cite: 1]</span>
+                <span>📧 <a href="mailto:nathanGR2005@gmail.com">nathanGR2005@gmail.com</a> [cite: 1]</span>
+            </div>
         </header>
 
         <hr>
 
-        <section id="experiencia">
-            <h2>Laboral Experience</h2>
-            <article>
-                <header><strong>Nombre del Puesto</strong> | Empresa</header>
-                <small>Mes Año – Actualidad</small>
-                <ul>
-                    <li>Logro o tarea principal que realizaste.</li>
-                    <li>Otra responsabilidad clave.</li>
-                </ul>
-            </article>
+        <section id="experience">
+            <h2>Experience</h2>
             
             <article>
-                <header><strong>Puesto Anterior</strong> | Empresa Anterior</header>
-                <small>Mes Año – Mes Año</small>
-                <p>Descripción breve de tu paso por esta empresa.</p>
+                <header>
+                    <strong>Sales Assistant (Night Logistics)</strong> | [cite_start]JD Sports, Barcelona [cite: 7, 10]
+                </header>
+                <small>December 2025 – January 2026 [cite: 8]</small>
+                <ul>
+                    <li>Stock management and digital registration using mobile terminals and databases.</li>
+                    <li>Merchandise reception and logistics optimization of the warehouse during the night shift[cite: 12].</li>
+                    <li>Product preparation for sale through tagging and security alarming[cite: 13].</li>
+                </ul>
             </article>
-        </section>
 
-        <section id="estudios">
-            <h2>Studies</h2>
             <article>
-                <header><strong>Nombre del Grado o Curso</strong></header>
-                <p>Institución Educativa | <em>En curso</em></p>
+                <header>
+                    <strong>Sales Assistant</strong> | [cite_start]Snipes, Barcelona [cite: 14, 15]
+                </header>
+                <small>December 2024 – August 2025 [cite: 16]</small>
+                <ul>
+                    <li>Public attention and sales promotion during periods of high demand[cite: 17].</li>
+                    <li>Personalized advice and product replenishment to optimize the store[cite: 17].</li>
+                </ul>
+            </article>
+
+            <article>
+                <header>
+                    <strong>Turnaround</strong> | Intercruises Shoreside & Port Services [cite: 18, 20]
+                </header>
+                <small>July 2023 – November 2024 [cite: 19]</small>
+                <ul>
+                    <li>Embarkation and disembarkation management at international cruise terminals[cite: 21].</li>
+                    <li>Direct assistance to global passengers using English as the working language[cite: 21].</li>
+                </ul>
             </article>
         </section>
 
-        <footer class="container">
-            <h2>Contacts</h2>
-            <div style="display: flex; gap: 20px;">
-                <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" class="contrast">LinkedIn</a>
-                <a href="mailto:nathanGR2005@gmail.com" role="button" class="secondary">Enviar Email</a>
+        <section id="education">
+            <h2>Education & Skills</h2>
+            <article>
+                <header><strong>Bachelor's Degree in Computer Engineering</strong></header>
+                <p>Universidad Pompeu Fabra (UPF), Barcelona | [cite_start]2023 – Present [cite: 23, 24, 25]</p>
+                <p>Training focused on algorithms, data structures, and software development[cite: 26].</p>
+                <div style="margin-top: 10px;">
+                    <span class="skill-badge">Python [cite: 26]</span>
+                    <span class="skill-badge">Java [cite: 26]</span>
+                    <span class="skill-badge">C [cite: 26]</span>
+                </div>
+            </article>
+
+            <article>
+                <header><strong>English Certification</strong></header>
+                <p>Trinity College London – B2 Certificate (ISE II) [cite: 27]</p>
+                <p><small>Official accreditation of linguistic competence in oral and written expression.</small></p>
+            </article>
+        </section>
+
+        <footer>
+            <h3>Let's Connect</h3>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" class="contrast">LinkedIn Profile [cite: 1]</a>
+                <a href="mailto:nathanGR2005@gmail.com" role="button" class="secondary">Send Email</a>
             </div>
         </footer>
 
