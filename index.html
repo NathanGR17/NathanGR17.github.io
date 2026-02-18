@@ -11,20 +11,22 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+        /* VARIABLES: Centralizamos colores y fuentes para facilitar cambios futuros */
         :root {
-            --primary: #8b0000 !important;
+            --primary: #8b0000 !important; /* Tu rojo granate */
             --primary-hover: #660000 !important;
             --font-family: 'Inter', sans-serif !important;
             --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body { 
-            font-family: 'Inter', sans-serif !important;
+            font-family: var(--font-family);
             background-color: #f8f8f8 !important;
             color: #000000 !important;
             overflow-x: hidden;
         }
 
+        /* REVEAL: Configuración para que JavaScript haga aparecer las secciones */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -36,6 +38,7 @@
             transform: translateY(0);
         }
 
+        /* RESET: Quitamos bordes y líneas que Pico.css pone por defecto */
         article, section, div, main, hgroup, article header {
             background-color: transparent !important;
             border: none !important;
@@ -44,12 +47,12 @@
             padding-top: 0 !important;
         }
 
-        h1, h2, h3, h4, strong, b { color: #8b0000 !important; }
+        h1, h2, h3, h4, strong, b { color: var(--primary); }
         p, li, span, small, time { color: #000000 !important; }
 
         header { 
-            padding: 3rem 0; 
-            border-bottom: 3px solid #8b0000 !important; 
+            padding: 2.5rem 0; 
+            border-bottom: 3px solid var(--primary); 
             margin-bottom: 3rem;
             display: flex;
             align-items: center;
@@ -62,12 +65,13 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #8b0000 !important;
+            border: 4px solid var(--primary);
         }
 
+        /* BOTONES: Uso de transform y box-shadow para la animación de elevación */
         [role="button"], button {
-            background-color: #8b0000 !important;
-            border-color: #8b0000 !important;
+            background-color: var(--primary);
+            border-color: var(--primary);
             color: #ffffff !important;
             display: inline-flex;
             align-items: center;
@@ -82,19 +86,21 @@
 
         [role="button"] i { color: #ffffff !important; margin-right: 8px; }
 
+        /* TARJETAS: El alma visual del portfolio */
         article { 
-            border-left: 5px solid #8b0000 !important; 
+            border-left: 5px solid var(--primary); 
             background: #ffffff !important;
             padding: 1.5rem !important;
             border-radius: 0 8px 8px 0 !important;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
-            margin-bottom: 2rem !important;
+            margin-bottom: 1.5rem !important;
         }
 
+        /* BADGES: Etiquetas circulares para skills e idiomas */
         .skill-badge { 
             background: #ffffff !important; 
             color: #000000 !important; 
-            border: 1.5px solid #8b0000 !important; 
+            border: 1.5px solid var(--primary); 
             padding: 2px 10px !important; 
             border-radius: 20px !important;
             font-size: 0.8rem !important;
@@ -103,7 +109,7 @@
             margin: 0 5px 5px 0 !important;
         }
         
-        .skill-badge i { color: #8b0000 !important; margin-right: 5px !important; }
+        .skill-badge i { color: var(--primary); margin-right: 5px !important; }
     </style>
 </head>
 <body>
@@ -117,8 +123,8 @@
                     <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p>
                 </hgroup>
                 <p>
-                    Student with a hybrid profile combining technical rigor with excellent interpersonal skills. 
-                    Great capacity for learning, proactivity, and communicative fluency in international environments.
+                    Student with a hybrid profile combining technical rigor with interpersonal skills. 
+                    Great capacity for learning and proactivity. Proficient in Python, Java, and C.
                 </p>
                 <div class="contact-links">
                     <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
@@ -134,11 +140,10 @@
                 <strong>Sales Assistant (Night Logistics)</strong> | JD Sports, Barcelona
                 <br>
                 <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</small>
-                <p>Stock management and digital registration using mobile terminals. Logistics optimization and merchandise reception during the night shift.</p>
+                <p>Stock management using mobile terminals and databases. Warehouse logistics optimization.</p>
                 <div class="skills">
-                    <span class="skill-badge">Logistics Management</span>
+                    <span class="skill-badge">Logistics</span>
                     <span class="skill-badge">Proactivity</span>
-                    <span class="skill-badge">Problem Solving</span>
                 </div>
             </article>
 
@@ -146,11 +151,10 @@
                 <strong>Sales Assistant</strong> | Snipes, Barcelona
                 <br>
                 <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small>
-                <p>Public attention and sales promotion during high demand periods. Personalized advice and store optimization.</p>
+                <p>Public attention and sales promotion. Store optimization and personalized advice.</p>
                 <div class="skills">
                     <span class="skill-badge">Customer Service</span>
                     <span class="skill-badge">Interpersonal Skills</span>
-                    <span class="skill-badge">Teamwork</span>
                 </div>
             </article>
 
@@ -158,10 +162,10 @@
                 <strong>Turnaround</strong> | Intercruises Shoreside & Port Services, Barcelona
                 <br>
                 <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small>
-                <p>Management of international cruise terminals. Direct assistance to global passengers using English as the working language.</p>
+                <p>Embarkation management at international terminals. English as the main working language.</p>
                 <div class="skills">
-                    <span class="skill-badge">Multilingual Communication</span>
-                    <span class="skill-badge">Adaptability</span>
+                    <span class="skill-badge">Multilingual Service</span>
+                    <span class="skill-badge">Communicative Fluency</span>
                 </div>
             </article>
         </section>
@@ -182,18 +186,17 @@
             <h2><i class="fa-solid fa-book-open"></i> Technical Stack & Education</h2>
             <article>
                 <strong>BSc in Computer Engineering</strong> | Universidad Pompeu Fabra (UPF)
-                <p>Training focused on algorithms, data structures, and software development.</p>
+                <p>Focus on algorithms, data structures, and software development.</p>
                 <div class="skills">
                     <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
                     <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
                     <span class="skill-badge">C</span>
                     <span class="skill-badge"><i class="fa-brands fa-github"></i> Git/GitHub</span>
-                    <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</span>
                 </div>
             </article>
         </section>
 
-        <footer class="reveal">
+        <footer>
             <h3><i class="fa-solid fa-paper-plane"></i> Let's Connect</h3>
             <div class="contact-links">
                 <a href="CV_Nathan_Garcia_Ramos.pdf" download role="button" class="outline">
@@ -202,23 +205,23 @@
                 <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" target="_blank">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="mailto:nathanGR2005@gmail.com" role="button">
-                    <i class="fa-solid fa-envelope"></i> Email
-                </a>
             </div>
         </footer>
     </main>
 
     <script>
-        const observerOptions = { threshold: 0.15 };
+        // Configuramos el observador: detecta cuándo el elemento entra en pantalla
+        const observerOptions = { threshold: 0.15 }; 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // Añade la clase 'active' para activar la transición CSS
                     entry.target.classList.add('active');
                 }
             });
         }, observerOptions);
 
+        // Seleccionamos todas las secciones con clase 'reveal' para vigilarlas
         document.querySelectorAll('.reveal').forEach(section => {
             observer.observe(section);
         });
