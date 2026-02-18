@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Nathan García Ramos</title>
+    <title>Nathan García Ramos | Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
-        :root { --spacing: 1.5rem; }
-        header { padding: 2.5rem 0; }
+        :root { 
+            --spacing: 1.5rem; 
+            --primary: #2563eb;
+        }
+        header { padding: 3rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; }
+        h1, h2, h3 { color: var(--primary); }
         .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
-        .skill-badge { background: #374151; color: white; padding: 4px 10px; border-radius: 5px; font-size: 0.85rem; margin-right: 5px; }
-        hr { margin: 2rem 0; }
+        .skill-badge { background: #374151; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; display: inline-block; margin-bottom: 5px; }
+        .project-card { border-left: 4px solid var(--primary); padding-left: 1.5rem; margin-bottom: 2rem; }
+        footer { margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; }
+        a.outline { border-color: var(--primary); color: var(--primary); }
     </style>
 </head>
 <body>
@@ -19,86 +25,84 @@
         <header>
             <hgroup>
                 <h1>Nathan García Ramos</h1>
-                <p>3rd-year Computer Engineering Student</p>
+                <p><strong>3rd-year Computer Engineering Student @ UPF</strong></p>
             </hgroup>
             <p>
-                Hybrid profile combining technical rigor with excellent interpersonal skills. 
-                Proactive learner with communicative fluency in international environments.
-                Proficiency in <strong>Python, Java, and C</strong>.
-                Currently expanding my technical stack with <strong>HTML and GitHub</strong> through hands-on projects.
+                Hybrid profile bridging technical development and user-centered design. 
+                Experienced in fast-paced international environments and passionate about 
+                solving complex problems through clean code and intuitive interfaces.
             </p>
             <div class="contact-links">
-                <span>📍 Barcelona, Spain </span>
-                <span>📧 <a href="mailto:nathanGR2005@gmail.com">nathanGR2005@gmail.com</a> </span>
+                <span>📍 Barcelona, Spain</span>
+                <span>📧 <a href="mailto:nathanGR2005@gmail.com">nathanGR2005@gmail.com</a></span>
             </div>
         </header>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>Designed and deployed using <strong>HTML5, CSS3 (Pico.css), and GitHub Pages</strong>. Focused on responsive design and information hierarchy for professional applications.</p>
+                <span class="skill-badge">Web Development</span> <span class="skill-badge">UI/UX</span>
+            </div>
+            <div class="project-card">
+                <h3>Mobile App Concepts</h3>
+                <p>Exploration of cross-platform development and UI components using <strong>Flutter</strong>.</p>
+                <span class="skill-badge">Flutter</span> <span class="skill-badge">Dart</span> <span class="skill-badge">Mobile Design</span>
+            </div>
+        </section>
 
         <hr>
 
         <section id="experience">
-            <h2>Experience</h2>
-            
+            <h2>Work Experience</h2>
             <article>
-                <header>
-                    <strong>Sales Assistant (Night Logistics)</strong> | JD Sports, Barcelona 
-                </header>
-                <small>December 2025 – January 2026 </small>
-                <ul>
-                    <li>Stock management and digital registration using mobile terminals and databases.</li>
-                    <li>Merchandise reception and logistics optimization of the warehouse during the night shift.</li>
-                    <li>Product preparation for sale through tagging and security alarming.</li>
-                </ul>
+                <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports</header>
+                <small>Dec 2025 – Jan 2026</small>
+                <p>Warehouse logistics optimization and digital stock management using mobile databases.</p>
             </article>
 
             <article>
-                <header>
-                    <strong>Sales Assistant</strong> | Snipes, Barcelona 
-                </header>
-                <small>December 2024 – August 2025 </small>
-                <ul>
-                    <li>Public attention and sales promotion during periods of high demand.</li>
-                    <li>Personalized advice and product replenishment to optimize the store.</li>
-                </ul>
+                <header><strong>Sales Assistant</strong> | Snipes</header>
+                <small>Dec 2024 – Aug 2025</small>
+                <p>Customer advisory and inventory management in high-demand retail environments.</p>
             </article>
 
             <article>
-                <header>
-                    <strong>Turnaround</strong> | Intercruises Shoreside & Port Services 
-                </header>
-                <small>July 2023 – November 2024 </small>
-                <ul>
-                    <li>Embarkation and disembarkation management at international cruise terminals.</li>
-                    <li>Direct assistance to global passengers using English as the working language.</li>
-                </ul>
+                <header><strong>Turnaround Specialist</strong> | Intercruises</header>
+                <small>Jul 2023 – Nov 2024</small>
+                <p>International passenger management and logistics in English-speaking environments.</p>
             </article>
         </section>
 
         <section id="education">
-            <h2>Education & Skills</h2>
+            <h2>Education & Technical Stack</h2>
             <article>
-                <header><strong>Bachelor's Degree in Computer Engineering</strong></header>
-                <p>Universidad Pompeu Fabra (UPF), Barcelona | 2023 – Present </p>
-                <p>Training focused on algorithms, data structures, and software development.</p>
-                <div style="margin-top: 10px;">
-                    <span class="skill-badge">Python </span>
-                    <span class="skill-badge">Java </span>
-                    <span class="skill-badge">C </span>
+                <header><strong>BSc in Computer Engineering</strong> | UPF</header>
+                <p>Focus on Algorithms, Data Structures, and Software Architecture.</p>
+                <div class="skills">
+                    <strong>Core:</strong> 
+                    <span class="skill-badge">Python</span> <span class="skill-badge">Java</span> 
+                    <span class="skill-badge">C</span> <span class="skill-badge">Flutter</span>
+                    <br>
+                    <strong>Tools:</strong> 
+                    <span class="skill-badge">Git/GitHub</span> <span class="skill-badge">HTML/CSS</span> 
+                    <span class="skill-badge">Docker (Basics)</span>
                 </div>
             </article>
 
             <article>
-                <header><strong>English Certification</strong></header>
-                <p>Trinity College London – B2 Certificate (ISE II) </p>
-                <p><small>Official accreditation of linguistic competence in oral and written expression.</small></p>
+                <header><strong>Languages</strong></header>
+                <p>English: <strong>Trinity B2 (ISE II)</strong> | Spanish/Catalan: Native</p>
             </article>
         </section>
 
         <footer>
-            <h3>Let's Connect</h3>
+            <h3>Let's build something together</h3>
             <div class="contact-links">
-                <a href="CV_Nathan_Garcia_Ramos.pdf" download role="button" class="outline">Download CV (PDF)</a>
-                <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" class="contrast">LinkedIn Profile </a>
-                <a href="mailto:nathanGR2005@gmail.com" role="button" class="secondary">Send Email</a>
+                <a href="CV_Nathan_Garcia_Ramos.pdf" download role="button" class="outline">Download Full CV (PDF)</a>
+                <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" class="contrast">LinkedIn</a>
+                <a href="mailto:nathanGR2005@gmail.com" role="button" class="secondary">Email Me</a>
             </div>
         </footer>
 
