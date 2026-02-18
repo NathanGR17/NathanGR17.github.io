@@ -9,48 +9,98 @@
     <link rel="icon" type="image/jpg" href="perfil.jpg">
     
     <style>
-        :root { 
-            --spacing: 1.5rem; 
-            --primary: #2563eb; 
-        }
-        header { 
-            padding: 3rem 0; 
-            border-bottom: 1px solid #e5e7eb; 
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--primary);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .header-content { flex: 1; min-width: 300px; }
-        h1, h2, h3 { color: var(--primary); }
-        .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; align-items: center; }
-        .skill-badge { background: #374151; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; display: inline-block; margin-bottom: 5px; }
-        .project-card { border-left: 4px solid var(--primary); padding-left: 1.5rem; margin-bottom: 2rem; }
-        footer { margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; }
-        
-        i { margin-right: 8px; color: var(--primary); }
-        .skill-badge i { color: white; }
-        
-        a[role="button"] { transition: all 0.3s ease; }
-        a[role="button"]:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
-        a[role="button"] { transition: all 0.3s ease; }
-        a[role="button"]:hover { transform: translateY(-2px );box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
-        @keyframes fadeIn {
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+    :root { 
+        --spacing: 1.5rem; 
+        --primary: #8b0000; 
+        --primary-hover: #a52a2a; 
+        --font-family: 'Inter', sans-serif;
+    }
+
+    
+    body { 
+        font-family: var(--font-family);
+        animation: fadeIn 0.8s ease-out;
+        background-color: #fcfcfc; 
+    }
+
+    header { 
+        padding: 3rem 0; 
+        border-bottom: 2px solid var(--primary); 
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--primary);
+        box-shadow: 0 4px 15px rgba(139, 0, 0, 0.15);
+    }
+
+    h1, h2, h3 { 
+        color: var(--primary); 
+        font-weight: 700;
+        letter-spacing: -0.02em; 
+    }
+
+    a[role="button"] { 
+        background-color: var(--primary);
+        border-color: var(--primary);
+        transition: all 0.3s ease;
+    }
+
+    a[role="button"].outline {
+        background-color: transparent;
+        color: var(--primary);
+        border-color: var(--primary);
+    }
+
+    a[role="button"]:hover { 
+        background-color: var(--primary-hover);
+        border-color: var(--primary-hover);
+        transform: translateY(-2px); 
+        box-shadow: 0 4px 12px rgba(139, 0, 0, 0.2); 
+    }
+
+    .skill-badge { 
+        background: #1a1a1a; 
+        color: white; 
+        padding: 4px 12px; 
+        border-radius: 4px; 
+        font-size: 0.8rem; 
+        margin-right: 5px; 
+        display: inline-block; 
+        margin-bottom: 5px; 
+    }
+
+    .project-card { 
+        border-left: 4px solid var(--primary); 
+        padding-left: 1.5rem; 
+        margin-bottom: 2rem;
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    i { margin-right: 8px; color: var(--primary); }
+    .skill-badge i { color: white; }
+
+    @keyframes fadeIn {
         from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
+    }
 }
 
 body {
-    animation: fadeIn 0.8s ease-out;
+    animation: fadeIn 1s ease-out;
     </style>
 </head>
 <body>
