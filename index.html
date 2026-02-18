@@ -12,32 +12,58 @@
             --spacing: 1.5rem; 
             --primary: #2563eb; 
         }
-        header { padding: 3rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; }
+        header { 
+            padding: 3rem 0; 
+            border-bottom: 1px solid #e5e7eb; 
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header-content { flex: 1; min-width: 300px; }
         h1, h2, h3 { color: var(--primary); }
         .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; align-items: center; }
         .skill-badge { background: #374151; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; display: inline-block; margin-bottom: 5px; }
         .project-card { border-left: 4px solid var(--primary); padding-left: 1.5rem; margin-bottom: 2rem; }
         footer { margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; }
         
+        /* Ajuste para iconos */
         i { margin-right: 8px; color: var(--primary); }
-        .skill-badge i { color: white; margin-right: 5px; }
+        .skill-badge i { color: white; }
+        
+        /* Efecto Hover para botones */
+        a[role="button"] { transition: all 0.3s ease; }
+        a[role="button"]:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
     </style>
 </head>
 <body>
     <main class="container">
         
         <header>
-            <hgroup>
-                <h1>Nathan García Ramos</h1>
-                <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p>
-            </hgroup>
-            <p>
-                Hybrid profile bridging technical development and user-centered design. 
-                Proficient in Python, Java, and C, with a strong focus on creating intuitive digital experiences.
-            </p>
-            <div class="contact-links">
-                <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
-                <span><i class="fa-solid fa-envelope"></i> <a href="mailto:nathanGR2005@gmail.com">nathanGR2005@gmail.com</a></span>
+            <img src="perfil.jpg" alt="Nathan García Ramos" class="profile-img">
+            
+            <div class="header-content">
+                <hgroup>
+                    <h1>Nathan García Ramos</h1>
+                    <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p>
+                </hgroup>
+                <p>
+                    Hybrid profile bridging technical development and user-centered design. 
+                    Proficient in Python, Java, and C, with a strong focus on creating intuitive digital experiences.
+                </p>
+                <div class="contact-links">
+                    <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
+                    <span><i class="fa-solid fa-envelope"></i> <a href="mailto:nathanGR2005@gmail.com">nathanGR2005@gmail.com</a></span>
+                </div>
             </div>
         </header>
 
@@ -45,7 +71,7 @@
             <h2><i class="fa-solid fa-code"></i> Featured Projects</h2>
             <div class="project-card">
                 <h3>Personal Portfolio Website</h3>
-                <p>Designed and deployed using HTML5, CSS3, and GitHub Pages. Focused on responsive design and information hierarchy for professional applications.</p>
+                <p>Designed and deployed using HTML5, CSS3, and GitHub Pages. Focused on responsive design and information hierarchy.</p>
                 <span class="skill-badge">Web Development</span> <span class="skill-badge">UI/UX</span>
             </div>
             <div class="project-card">
@@ -88,10 +114,6 @@
                     <span class="skill-badge"><i class="fa-brands fa-github"></i> Git/GitHub</span>
                     <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</span>
                 </div>
-            </article>
-            <article>
-                <header><strong>Languages</strong></header>
-                <p>English: <strong>Trinity B2 (ISE II)</strong> | Spanish & Catalan: Native</p>
             </article>
         </section>
 
