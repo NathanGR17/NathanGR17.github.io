@@ -91,7 +91,6 @@
             margin-bottom: 2rem !important;
         }
 
-        /* CÁPSULAS */
         .skill-badge { 
             background: #ffffff !important; 
             color: #000000 !important; 
@@ -130,20 +129,24 @@
 
         <section id="experience" class="reveal">
             <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+            
             <article>
-                <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports, Barcelona</header>
+                <strong>Sales Assistant (Night Logistics)</strong> | JD Sports, Barcelona
+                <br>
                 <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</small>
                 <p>Stock management and digital registration using mobile terminals and databases. Logistics optimization and merchandise reception.</p>
             </article>
 
             <article>
-                <header><strong>Sales Assistant</strong> | Snipes, Barcelona</header>
+                <strong>Sales Assistant</strong> | Snipes, Barcelona
+                <br>
                 <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small>
                 <p>Public attention and sales promotion. Personalized advice and product replenishment to optimize the store.</p>
             </article>
 
             <article>
-                <header><strong>Turnaround</strong> | Intercruises Shoreside & Port Services, Barcelona</header>
+                <strong>Turnaround</strong> | Intercruises Shoreside & Port Services, Barcelona
+                <br>
                 <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small>
                 <p>Embarkation management at international terminals. Direct assistance to global passengers in English.</p>
             </article>
@@ -164,7 +167,7 @@
         <section id="education" class="reveal">
             <h2><i class="fa-solid fa-book-open"></i> Technical Stack & Education</h2>
             <article>
-                <header><strong>BSc in Computer Engineering</strong> | Universidad Pompeu Fabra (UPF)</header>
+                <strong>BSc in Computer Engineering</strong> | Universidad Pompeu Fabra (UPF)
                 <p>Training focused on algorithms, data structures, and software development.</p>
                 <div class="skills">
                     <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
@@ -194,10 +197,7 @@
     </main>
 
     <script>
-        const observerOptions = {
-            threshold: 0.15 
-        };
-
+        const observerOptions = { threshold: 0.15 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
