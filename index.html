@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light"> <head>
+<html lang="en" data-theme="light">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan García Ramos | Portfolio</title>
@@ -31,7 +32,7 @@
             color: #000000 !important;
         }
 
-        h1, h2, h3, h4, strong, b, header strong { 
+        h1, h2, h3, h4, strong, b { 
             color: #8b0000 !important; 
         }
 
@@ -62,10 +63,28 @@
             color: #8b0000 !important; 
         }
 
-        a { 
-            color: #8b0000 !important; 
-            text-decoration: underline;
-            text-decoration-color: rgba(139, 0, 0, 0.3);
+        [role="button"], button {
+            background-color: #8b0000 !important;
+            border-color: #8b0000 !important;
+            color: #ffffff !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        [role="button"] i, button i {
+            color: #ffffff !important;
+            margin-right: 8px;
+        }
+
+        [role="button"].outline {
+            background-color: transparent !important;
+            color: #8b0000 !important;
+            border-color: #8b0000 !important;
+        }
+
+        [role="button"].outline i {
+            color: #8b0000 !important;
         }
 
         .project-card { 
@@ -95,17 +114,6 @@
             margin-right: 5px !important;
         }
 
-        [role="button"], button {
-            background-color: #8b0000 !important;
-            border-color: #8b0000 !important;
-            color: #ffffff !important;
-        }
-
-        [role="button"].outline {
-            background-color: transparent !important;
-            color: #8b0000 !important;
-        }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -125,7 +133,7 @@
                 </hgroup>
                 <p>
                     Hybrid profile bridging technical development and user-centered design. 
-                    Proficient in Python, Java, and C, with a strong focus on creating intuitive digital experiences.
+                    Proficient in Python, Java, and C, focusing on intuitive digital experiences.
                 </p>
                 <div class="contact-links">
                     <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
@@ -138,12 +146,12 @@
             <h2><i class="fa-solid fa-code"></i> Featured Projects</h2>
             <div class="project-card">
                 <h3>Personal Portfolio Website</h3>
-                <p>Designed and deployed using HTML5, CSS3, and GitHub Pages. Focused on responsive design and information hierarchy.</p>
+                <p>Designed and deployed using HTML5, CSS3, and GitHub Pages. Focused on responsive design.</p>
                 <span class="skill-badge">Web Development</span> <span class="skill-badge">UI/UX</span>
             </div>
             <div class="project-card">
                 <h3>Mobile App Development</h3>
-                <p>Experience exploring cross-platform frameworks and UI components using Flutter and Dart.</p>
+                <p>Experience exploring cross-platform frameworks using Flutter and Dart.</p>
                 <span class="skill-badge"><i class="fa-solid fa-mobile-screen"></i> Flutter</span> <span class="skill-badge">Dart</span>
             </div>
         </section>
@@ -153,19 +161,13 @@
             <article>
                 <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports</header>
                 <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</small>
-                <p>Stock management and digital registration using mobile terminals and databases.</p>
+                <p>Stock management and digital registration using mobile terminals.</p>
             </article>
 
             <article>
                 <header><strong>Sales Assistant</strong> | Snipes</header>
                 <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small>
-                <p>Public attention and sales promotion during periods of high demand.</p>
-            </article>
-
-            <article>
-                <header><strong>Turnaround Specialist</strong> | Intercruises</header>
-                <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small>
-                <p>Management of international cruise terminals and direct passenger assistance in English.</p>
+                <p>Public attention and sales promotion during high demand periods.</p>
             </article>
         </section>
 
@@ -173,7 +175,6 @@
             <h2><i class="fa-solid fa-book-open"></i> Technical Stack</h2>
             <article>
                 <header><strong>BSc in Computer Engineering</strong> | UPF</header>
-                <p>Focused on algorithms, data structures, and software architecture.</p>
                 <div class="skills">
                     <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
                     <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
@@ -190,10 +191,10 @@
                 <a href="CV_Nathan_Garcia_Ramos.pdf" download role="button" class="outline">
                     <i class="fa-solid fa-file-pdf"></i> Download CV
                 </a>
-                <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" class="contrast" target="_blank">
+                <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" target="_blank">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="mailto:nathanGR2005@gmail.com" role="button" class="secondary">
+                <a href="mailto:nathanGR2005@gmail.com" role="button">
                     <i class="fa-solid fa-envelope"></i> Email
                 </a>
             </div>
