@@ -24,21 +24,28 @@
             animation: fadeIn 0.8s ease-out;
         }
 
-        article, section, div, main, hgroup, article header {
+        article, section, div, main, hgroup {
             background-color: transparent !important;
             background: transparent !important;
             color: #000000 !important;
             border: none !important;
             box-shadow: none !important;
-            border-top: none !important; 
             padding-top: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        article header {
+            border-top: none !important; 
+            background-color: transparent !important;
+            padding: 0 !important;
+            margin: 0 0 0.5rem 0 !important;
         }
 
         h1, h2, h3, h4, strong, b { color: #8b0000 !important; }
         p, li, span, small, time { color: #000000 !important; }
 
         header { 
-            padding: 3rem 0; 
+            padding: 2rem 0; 
             border-bottom: 3px solid #8b0000 !important; 
             margin-bottom: 2rem;
             display: flex;
@@ -48,8 +55,8 @@
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #8b0000 !important;
@@ -63,6 +70,7 @@
             color: #ffffff !important;
             display: inline-flex;
             align-items: center;
+            padding: 0.5rem 1rem;
         }
 
         [role="button"] i { color: #ffffff !important; margin-right: 8px; }
@@ -78,23 +86,22 @@
         .project-card, article { 
             border-left: 5px solid #8b0000 !important; 
             background: #ffffff !important;
-            padding: 1.5rem !important;
+            padding: 1rem 1.5rem !important;
             border-radius: 0 8px 8px 0 !important;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
-            margin-bottom: 2rem !important;
+            margin-bottom: 1.5rem !important;
         }
 
         .skill-badge { 
             background: #ffffff !important; 
             color: #000000 !important; 
             border: 1.5px solid #8b0000 !important; 
-            padding: 5px 12px !important; 
+            padding: 2px 10px !important; 
             border-radius: 20px !important;
             font-size: 0.8rem !important;
             font-weight: 600 !important;
             display: inline-block !important;
-            margin-bottom: 5px !important;
-            margin-right: 5px !important;
+            margin: 0 5px 5px 0 !important;
         }
         
         .skill-badge i { color: #8b0000 !important; margin-right: 5px !important; }
@@ -112,16 +119,17 @@
             <img src="perfil.jpg" alt="Nathan García Ramos" class="profile-img">
             <div class="header-content">
                 <hgroup>
-                    <h1>Nathan García Ramos</h1>
-                    <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p>
+                    <h1>Nathan García Ramos</h1> [cite: 2]
+                    <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p> [cite: 3, 22]
                 </hgroup>
                 <p>
-                    Hybrid profile bridging technical development and user-centered design.
-                    Proficient in Python, Java, and C.
+                    Hybrid profile combining technical rigor with interpersonal skills[cite: 3]. 
+                    Capacity for learning, proactivity, and communicative fluency[cite: 4].
+                    Proficient in Python, Java, and C[cite: 5].
                 </p>
                 <div class="contact-links">
-                    <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
-                    <span><i class="fa-solid fa-envelope"></i> <a href="mailto:nathanGR2005@gmail.com">nathanGR2005@gmail.com</a></span>
+                    <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span> [cite: 1]
+                    <span><i class="fa-solid fa-envelope"></i> <a href="mailto:nathanGR2005@gmail.com">nathanGR2005@gmail.com</a></span> [cite: 1]
                 </div>
             </div>
         </header>
@@ -143,21 +151,21 @@
         <section id="experience">
             <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
             <article>
-                <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports</header>
-                <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</small>
-                <p>Stock management and digital registration using mobile terminals.</p>
+                <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports, Barcelona</header> [cite: 7, 9]
+                <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</small> [cite: 8]
+                <p>Stock management and digital registration using mobile terminals[cite: 10]. Merchandise reception and logistics optimization[cite: 11].</p>
             </article>
 
             <article>
-                <header><strong>Sales Assistant</strong> | Snipes</header>
-                <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small>
-                <p>Public attention and sales promotion during high demand periods.</p>
+                <header><strong>Sales Assistant</strong> | Snipes, Barcelona</header> [cite: 13, 14]
+                <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small> [cite: 15]
+                <p>Public attention, sales promotion, and personalized advice to optimize the store[cite: 16].</p>
             </article>
 
             <article>
-                <header><strong>Turnaround</strong> | Intercruises</header>
-                <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small>
-                <p>Management of international cruise terminals and direct passenger assistance in English.</p>
+                <header><strong>Turnaround</strong> | Intercruises, Barcelona</header> [cite: 17, 19]
+                <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small> [cite: 18]
+                <p>Embarkation and disembarkation management at cruise terminals. Direct assistance to global passengers in English[cite: 20].</p>
             </article>
         </section>
 
@@ -167,20 +175,21 @@
                 <div class="skills">
                     <span class="skill-badge"><strong>Spanish:</strong> Native</span>
                     <span class="skill-badge"><strong>Catalan:</strong> Native</span>
-                    <span class="skill-badge"><strong>English:</strong> B2 Upper Intermediate (Trinity ISE II)</span>
+                    <span class="skill-badge"><strong>English:</strong> B2 Upper Intermediate (Trinity ISE II)</span> [cite: 26]
                 </div>
-                <p><small>Official accreditation of linguistic competence in comprehension and expression.</small></p>
+                <p><small>Official accreditation of linguistic competence in comprehension and expression[cite: 27].</small></p>
             </article>
         </section>
 
         <section id="education">
             <h2><i class="fa-solid fa-book-open"></i> Technical Stack</h2>
             <article>
-                <header><strong>BSc in Computer Engineering</strong> | UPF</header>
+                <header><strong>BSc in Computer Engineering</strong> | UPF</header> [cite: 22]
+                <p>Focused on algorithms, data structures, and software development[cite: 25].</p>
                 <div class="skills">
-                    <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
-                    <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
-                    <span class="skill-badge">C</span>
+                    <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span> [cite: 5]
+                    <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span> [cite: 5]
+                    <span class="skill-badge">C</span> [cite: 5]
                     <span class="skill-badge"><i class="fa-brands fa-github"></i> Git/GitHub</span>
                     <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</span>
                 </div>
@@ -194,10 +203,10 @@
                     <i class="fa-solid fa-file-pdf"></i> Download CV
                 </a>
                 <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn [cite: 1]
                 </a>
                 <a href="mailto:nathanGR2005@gmail.com" role="button">
-                    <i class="fa-solid fa-envelope"></i> Email
+                    <i class="fa-solid fa-envelope"></i> Email [cite: 1]
                 </a>
             </div>
         </footer>
