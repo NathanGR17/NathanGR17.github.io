@@ -16,7 +16,7 @@
             --primary-hover: #660000 !important;
             --font-family: 'Inter', sans-serif !important;
         }
-        
+
         body { 
             font-family: 'Inter', sans-serif !important;
             background-color: #f8f8f8 !important;
@@ -30,6 +30,14 @@
             color: #000000 !important;
             border: none !important;
             box-shadow: none !important;
+            padding-top: 0 !important; 
+        }
+
+        article header {
+            border-top: none !important;
+            background-color: transparent !important;
+            padding-top: 0 !important;
+            margin-bottom: 1rem !important;
         }
 
         h1, h2, h3, h4, strong, b { 
@@ -59,9 +67,7 @@
             box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2);
         }
 
-        i, .fa-solid, .fa-brands { 
-            color: #8b0000 !important; 
-        }
+        i, .fa-solid, .fa-brands { color: #8b0000 !important; }
 
         [role="button"], button {
             background-color: #8b0000 !important;
@@ -72,19 +78,15 @@
             justify-content: center;
         }
 
-        [role="button"] i {
-            color: #ffffff !important;
-            margin-right: 8px;
-        }
+        [role="button"] i { color: #ffffff !important; margin-right: 8px; }
 
         [role="button"].outline {
             background-color: transparent !important;
             color: #8b0000 !important;
+            border-color: #8b0000 !important;
         }
 
-        [role="button"].outline i {
-            color: #8b0000 !important;
-        }
+        [role="button"].outline i { color: #8b0000 !important; }
 
         .project-card, article { 
             border-left: 5px solid #8b0000 !important; 
@@ -108,10 +110,7 @@
             margin-right: 5px !important;
         }
         
-        .skill-badge i { 
-            color: #8b0000 !important; 
-            margin-right: 5px !important;
-        }
+        .skill-badge i { color: #8b0000 !important; margin-right: 5px !important; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -130,8 +129,8 @@
                     <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p>
                 </hgroup>
                 <p>
-                    Hybrid profile bridging technical development and user-centered design. 
-                    Proficient in Python, Java, and C.
+                    Hybrid profile bridging technical development and user-centered design. [cite: 3]
+                    Proficient in Python, Java, and C. [cite: 5, 25]
                 </p>
                 <div class="contact-links">
                     <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
@@ -158,35 +157,20 @@
             <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
             <article>
                 <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports</header>
-                <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</small>
-                <p>Stock management and digital registration using mobile terminals.</p>
+                <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</small> [cite: 8, 9]
+                <p>Stock management and digital registration using mobile terminals. [cite: 10]</p>
             </article>
 
             <article>
                 <header><strong>Sales Assistant</strong> | Snipes</header>
-                <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small>
-                <p>Public attention and sales promotion during high demand periods.</p>
+                <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small> [cite: 13, 15]
+                <p>Public attention and sales promotion during high demand periods. [cite: 16]</p>
             </article>
 
             <article>
                 <header><strong>Turnaround</strong> | Intercruises</header>
-                <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small>
-                <p>Management of international cruise terminals and direct passenger assistance in English.</p>
-            </article>
-        </section>
-
-        <section id="education">
-            <h2><i class="fa-solid fa-book-open"></i> Education & Technical Stack</h2>
-            <article>
-                <header><strong>BSc in Computer Engineering</strong> | UPF</header>
-                <p>Focused on algorithms, data structures, and software development.</p>
-                <div class="skills">
-                    <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
-                    <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
-                    <span class="skill-badge">C</span>
-                    <span class="skill-badge"><i class="fa-brands fa-github"></i> Git/GitHub</span>
-                    <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</span>
-                </div>
+                <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small> [cite: 17, 18]
+                <p>Management of international cruise terminals and direct passenger assistance in English. [cite: 20]</p>
             </article>
         </section>
 
@@ -196,9 +180,23 @@
                 <div class="skills">
                     <span class="skill-badge"><strong>Spanish:</strong> Native</span>
                     <span class="skill-badge"><strong>Catalan:</strong> Native</span>
-                    <span class="skill-badge"><strong>English:</strong> B2 Upper Intermediate (Trinity ISE II)</span>
+                    <span class="skill-badge"><strong>English:</strong> B2 Upper Intermediate (Trinity ISE II)</span> 
                 </div>
-                <p><small>Official accreditation of linguistic competence in oral and written expression.</small></p>
+                <p><small>Official accreditation of linguistic competence in comprehension and expression. [cite: 27]</small></p>
+            </article>
+        </section>
+
+        <section id="education">
+            <h2><i class="fa-solid fa-book-open"></i> Technical Stack</h2>
+            <article>
+                <header><strong>BSc in Computer Engineering</strong> | UPF</header> [cite: 22]
+                <div class="skills">
+                    <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
+                    <span class="skill-badge">C</span>
+                    <span class="skill-badge"><i class="fa-brands fa-github"></i> Git/GitHub</span>
+                    <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</span>
+                </div>
             </article>
         </section>
 
