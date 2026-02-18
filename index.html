@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan García Ramos | Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <style>
         :root { 
             --spacing: 1.5rem; 
-            --primary: #2563eb;
+            --primary: #2563eb; 
         }
         header { padding: 3rem 0; border-bottom: 1px solid #e5e7eb; margin-bottom: 2rem; }
         h1, h2, h3 { color: var(--primary); }
-        .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+        .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; align-items: center; }
         .skill-badge { background: #374151; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-right: 5px; display: inline-block; margin-bottom: 5px; }
         .project-card { border-left: 4px solid var(--primary); padding-left: 1.5rem; margin-bottom: 2rem; }
         footer { margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; }
-        a.outline { border-color: var(--primary); color: var(--primary); }
+        
+        /* Ajuste para iconos en botones */
+        i { margin-right: 8px; }
+        .icon-link { text-decoration: none; color: inherit; display: flex; align-items: center; }
     </style>
 </head>
 <body>
@@ -25,84 +30,75 @@
         <header>
             <hgroup>
                 <h1>Nathan García Ramos</h1>
-                <p><strong>3rd-year Computer Engineering Student @ UPF</strong></p>
+                <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p>
             </hgroup>
             <p>
                 Hybrid profile bridging technical development and user-centered design. 
-                Experienced in fast-paced international environments and passionate about 
-                solving complex problems through clean code and intuitive interfaces.
+                Proficient in <strong>Python, Java, and C</strong>[cite: 5]. 
+                Passionate about solving complex problems through clean code and intuitive interfaces.
             </p>
             <div class="contact-links">
-                <span>📍 Barcelona, Spain</span>
-                <span>📧 <a href="mailto:nathanGR2005@gmail.com">nathanGR2005@gmail.com</a></span>
+                <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain [cite: 1]</span>
+                <span><i class="fa-solid fa-envelope"></i> <a href="mailto:nathanGR2005@gmail.com">nathanGR2005@gmail.com</a> [cite: 1]</span>
             </div>
         </header>
 
         <section id="projects">
-            <h2>Featured Projects</h2>
+            <h2><i class="fa-solid fa-code"></i> Featured Projects</h2>
             <div class="project-card">
                 <h3>Personal Portfolio Website</h3>
-                <p>Designed and deployed using <strong>HTML5, CSS3 (Pico.css), and GitHub Pages</strong>. Focused on responsive design and information hierarchy for professional applications.</p>
+                <p>Designed and deployed using <strong>HTML5, CSS3, and GitHub Pages</strong>. Focused on responsive design and information hierarchy.</p>
                 <span class="skill-badge">Web Development</span> <span class="skill-badge">UI/UX</span>
             </div>
             <div class="project-card">
                 <h3>Mobile App Concepts</h3>
                 <p>Exploration of cross-platform development and UI components using <strong>Flutter</strong>.</p>
-                <span class="skill-badge">Flutter</span> <span class="skill-badge">Dart</span> <span class="skill-badge">Mobile Design</span>
+                <span class="skill-badge">Flutter</span> <span class="skill-badge">Dart</span>
             </div>
         </section>
 
-        <hr>
-
         <section id="experience">
-            <h2>Work Experience</h2>
+            <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
             <article>
-                <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports</header>
-                <small>Dec 2025 – Jan 2026</small>
-                <p>Warehouse logistics optimization and digital stock management using mobile databases.</p>
+                <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports [cite: 7, 10]</header>
+                <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026 [cite: 8]</small>
+                <p>Stock management and digital registration using mobile terminals and databases[cite: 11].</p>
             </article>
 
             <article>
-                <header><strong>Sales Assistant</strong> | Snipes</header>
-                <small>Dec 2024 – Aug 2025</small>
-                <p>Customer advisory and inventory management in high-demand retail environments.</p>
-            </article>
-
-            <article>
-                <header><strong>Turnaround Specialist</strong> | Intercruises</header>
-                <small>Jul 2023 – Nov 2024</small>
-                <p>International passenger management and logistics in English-speaking environments.</p>
+                <header><strong>Turnaround Specialist</strong> | Intercruises [cite: 18, 20]</header>
+                <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024 [cite: 19]</small>
+                <p>Direct assistance to global passengers using English as the working language[cite: 21].</p>
             </article>
         </section>
 
         <section id="education">
-            <h2>Education & Technical Stack</h2>
+            <h2><i class="fa-solid fa-book-open"></i> Technical Stack</h2>
             <article>
-                <header><strong>BSc in Computer Engineering</strong> | UPF</header>
-                <p>Focus on Algorithms, Data Structures, and Software Architecture.</p>
+                <header><strong>BSc in Computer Engineering</strong> | UPF </header>
+                <p>Training focused on algorithms and software development[cite: 26].</p>
                 <div class="skills">
-                    <strong>Core:</strong> 
-                    <span class="skill-badge">Python</span> <span class="skill-badge">Java</span> 
-                    <span class="skill-badge">C</span> <span class="skill-badge">Flutter</span>
-                    <br>
-                    <strong>Tools:</strong> 
-                    <span class="skill-badge">Git/GitHub</span> <span class="skill-badge">HTML/CSS</span> 
-                    <span class="skill-badge">Docker (Basics)</span>
+                    <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
+                    <span class="skill-badge">C</span>
+                    <span class="skill-badge"><i class="fa-solid fa-mobile-screen"></i> Flutter</span>
+                    <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</span>
                 </div>
-            </article>
-
-            <article>
-                <header><strong>Languages</strong></header>
-                <p>English: <strong>Trinity B2 (ISE II)</strong> | Spanish/Catalan: Native</p>
             </article>
         </section>
 
         <footer>
-            <h3>Let's build something together</h3>
+            <h3><i class="fa-solid fa-paper-plane"></i> Let's Connect</h3>
             <div class="contact-links">
-                <a href="CV_Nathan_Garcia_Ramos.pdf" download role="button" class="outline">Download Full CV (PDF)</a>
-                <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" class="contrast">LinkedIn</a>
-                <a href="mailto:nathanGR2005@gmail.com" role="button" class="secondary">Email Me</a>
+                <a href="CV_Nathan_Garcia_Ramos.pdf" download role="button" class="outline">
+                    <i class="fa-solid fa-file-pdf"></i> Download CV
+                </a>
+                <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" class="contrast" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:nathanGR2005@gmail.com" role="button" class="secondary">
+                    <i class="fa-solid fa-envelope"></i> Email
+                </a>
             </div>
         </footer>
 
