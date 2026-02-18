@@ -24,21 +24,14 @@
             animation: fadeIn 0.8s ease-out;
         }
 
-        article, section, div, main, hgroup {
+        article, section, div, main, hgroup, article header {
             background-color: transparent !important;
             background: transparent !important;
             color: #000000 !important;
             border: none !important;
             box-shadow: none !important;
-            padding-top: 0 !important;
-            margin-top: 0 !important;
-        }
-
-        article header {
             border-top: none !important;
-            background-color: transparent !important;
-            padding: 0 !important;
-            margin: 0 0 0.5rem 0 !important;
+            padding-top: 0 !important;
         }
 
         h1, h2, h3, h4, strong, b { color: #8b0000 !important; }
@@ -70,7 +63,19 @@
             color: #ffffff !important;
             display: inline-flex;
             align-items: center;
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+            cursor: pointer;
+        }
+
+        [role="button"]:hover, button:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 15px rgba(139, 0, 0, 0.3) !important; 
+            background-color: #a00000 !important; 
+        }
+
+        [role="button"]:active, button:active {
+            transform: translateY(-1px);
         }
 
         [role="button"] i { color: #ffffff !important; margin-right: 8px; }
@@ -79,6 +84,11 @@
             background-color: transparent !important;
             color: #8b0000 !important;
             border: 2px solid #8b0000 !important;
+        }
+
+        [role="button"].outline:hover {
+            background-color: rgba(139, 0, 0, 0.05) !important;
+            color: #8b0000 !important;
         }
 
         [role="button"].outline i { color: #8b0000 !important; }
@@ -123,8 +133,8 @@
                     <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p>
                 </hgroup>
                 <p>
-                    Student with a hybrid profile that combines technical rigor with excellent interpersonal skills. 
-                    Possessing a great capacity for learning, proactivity, and communicative fluency in international environments.
+                    3rd-year student of Computer Engineering with a hybrid profile that combines technical rigor with excellent interpersonal skills. 
+                    Great capacity for learning, proactivity, and communicative fluency in international environments.
                 </p>
                 <div class="contact-links">
                     <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
