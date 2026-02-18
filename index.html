@@ -86,21 +86,25 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
     
-        .skill-badge { 
+        .skill-badge, 
+        article .skill-badge, 
+        section .skill-badge { 
             background: #ffffff !important; 
             color: #000000 !important; 
             border: 1.5px solid #8b0000 !important; 
-            padding: 5px 12px; 
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 5px;
+            padding: 5px 12px !important; 
+            border-radius: 20px !important;
+            font-size: 0.8rem !important;
+            font-weight: 600 !important;
+            display: inline-block !important;
+            margin-bottom: 5px !important;
+            opacity: 1 !important;
         }
         
-        .skill-badge i { 
+        .skill-badge i, 
+        article .skill-badge i { 
             color: #8b0000 !important; 
-            margin-right: 5px;
+            margin-right: 5px !important;
         }
     
         @keyframes fadeIn {
@@ -110,6 +114,7 @@
     
         body {
             animation: fadeIn 1s ease-out;
+        }
     </style>
 </head>
 <body>
@@ -149,56 +154,3 @@
         </section>
 
         <section id="experience">
-            <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
-            <article>
-                <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports</header>
-                <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</small>
-                <p>Stock management and digital registration using mobile terminals and databases.</p>
-            </article>
-
-            <article>
-                <header><strong>Sales Assistant</strong> | Snipes</header>
-                <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small>
-                <p>Public attention and sales promotion during periods of high demand.</p>
-            </article>
-
-            <article>
-                <header><strong>Turnaround Specialist</strong> | Intercruises</header>
-                <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small>
-                <p>Management of international cruise terminals and direct passenger assistance in English.</p>
-            </article>
-        </section>
-
-        <section id="education">
-            <h2><i class="fa-solid fa-book-open"></i> Technical Stack</h2>
-            <article>
-                <header><strong>BSc in Computer Engineering</strong> | UPF</header>
-                <p>Focused on algorithms, data structures, and software architecture.</p>
-                <div class="skills">
-                    <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
-                    <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
-                    <span class="skill-badge">C</span>
-                    <span class="skill-badge"><i class="fa-brands fa-github"></i> Git/GitHub</span>
-                    <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</span>
-                </div>
-            </article>
-        </section>
-
-        <footer>
-            <h3><i class="fa-solid fa-paper-plane"></i> Let's Connect</h3>
-            <div class="contact-links">
-                <a href="CV_Nathan_Garcia_Ramos.pdf" download role="button" class="outline">
-                    <i class="fa-solid fa-file-pdf"></i> Download CV
-                </a>
-                <a href="https://www.linkedin.com/in/nathan-garcía-ramos-a38240388" role="button" class="contrast" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="mailto:nathanGR2005@gmail.com" role="button" class="secondary">
-                    <i class="fa-solid fa-envelope"></i> Email
-                </a>
-            </div>
-        </footer>
-
-    </main>
-</body>
-</html>
