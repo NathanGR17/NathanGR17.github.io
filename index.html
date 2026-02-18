@@ -15,23 +15,58 @@
             --primary: #8b0000 !important;
             --primary-hover: #660000 !important;
             --font-family: 'Inter', sans-serif !important;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         body { 
             font-family: 'Inter', sans-serif !important;
             background-color: #f8f8f8 !important;
             color: #000000 !important;
-            animation: fadeIn 0.8s ease-out;
         }
 
-        article, section, div, main, hgroup, article header {
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header, section, footer {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        header { animation-delay: 0.1s; }
+        #experience { animation-delay: 0.3s; }
+        #languages { animation-delay: 0.5s; }
+        #education { animation-delay: 0.6s; }
+        footer { animation-delay: 0.7s; }
+
+        article, section, div, main, hgroup {
             background-color: transparent !important;
             background: transparent !important;
-            color: #000000 !important;
             border: none !important;
             box-shadow: none !important;
+        }
+
+        article, .project-card { 
+            border-left: 5px solid #8b0000 !important; 
+            background: #ffffff !important;
+            padding: 1.5rem !important;
+            border-radius: 0 8px 8px 0 !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+            margin-bottom: 1.5rem !important;
+            transition: var(--transition);
+        }
+
+        article:hover, .project-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+        article header {
             border-top: none !important;
-            padding-top: 0 !important;
+            background: transparent !important;
+            padding: 0 !important;
+            margin: 0 0 0.5rem 0 !important;
         }
 
         h1, h2, h3, h4, strong, b { color: #8b0000 !important; }
@@ -53,7 +88,10 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #8b0000 !important;
+            transition: transform 0.5s ease;
         }
+
+        .profile-img:hover { transform: rotate(5deg) scale(1.1); }
 
         i, .fa-solid, .fa-brands { color: #8b0000 !important; }
 
@@ -64,18 +102,13 @@
             display: inline-flex;
             align-items: center;
             padding: 0.6rem 1.2rem;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
-            cursor: pointer;
+            transition: var(--transition);
         }
 
-        [role="button"]:hover, button:hover {
-            transform: translateY(-3px); 
-            box-shadow: 0 8px 15px rgba(139, 0, 0, 0.3) !important; 
-            background-color: #a00000 !important; 
-        }
-
-        [role="button"]:active, button:active {
-            transform: translateY(-1px);
+        [role="button"]:hover {
+            filter: brightness(1.2);
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(139, 0, 0, 0.3) !important;
         }
 
         [role="button"] i { color: #ffffff !important; margin-right: 8px; }
@@ -86,22 +119,8 @@
             border: 2px solid #8b0000 !important;
         }
 
-        [role="button"].outline:hover {
-            background-color: rgba(139, 0, 0, 0.05) !important;
-            color: #8b0000 !important;
-        }
-
         [role="button"].outline i { color: #8b0000 !important; }
-
-        .project-card, article { 
-            border-left: 5px solid #8b0000 !important; 
-            background: #ffffff !important;
-            padding: 1.2rem 1.5rem !important;
-            border-radius: 0 8px 8px 0 !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
-            margin-bottom: 1.5rem !important;
-        }
-
+        
         .skill-badge { 
             background: #ffffff !important; 
             color: #000000 !important; 
@@ -112,14 +131,15 @@
             font-weight: 600 !important;
             display: inline-block !important;
             margin: 0 5px 5px 0 !important;
+            transition: var(--transition);
         }
-        
-        .skill-badge i { color: #8b0000 !important; margin-right: 5px !important; }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .skill-badge:hover {
+            background: #8b0000 !important;
+            color: #ffffff !important;
         }
+
+        .skill-badge:hover i { color: #ffffff !important; }
     </style>
 </head>
 <body>
@@ -133,8 +153,8 @@
                     <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p>
                 </hgroup>
                 <p>
-                    3rd-year student of Computer Engineering with a hybrid profile that combines technical rigor with excellent interpersonal skills. 
-                    Great capacity for learning, proactivity, and communicative fluency in international environments.
+                    [cite_start]3rd-year student of Computer Engineering with a hybrid profile that combines technical rigor with excellent interpersonal skills[cite: 3]. 
+                    [cite_start]Possessing a great capacity for learning, proactivity, and communicative fluency in international environments[cite: 4].
                 </p>
                 <div class="contact-links">
                     <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
@@ -145,22 +165,29 @@
 
         <section id="experience">
             <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+            
             <article>
-                <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports, Barcelona</header>
-                <small><i class="fa-regular fa-calendar"></i> December 2025 – January 2026</small>
-                <p>Stock management and digital registration using mobile terminals and databases. Logistics optimization of the warehouse and product preparation through tagging and security alarming.</p>
+                <header>
+                    <strong>Sales Assistant (Night Logistics)</strong> | JD Sports, Barcelona
+                </header>
+                [cite_start]<small><i class="fa-regular fa-calendar"></i> December 2025 – January 2026 [cite: 8, 9]</small>
+                [cite_start]<p>Stock management and digital registration using mobile terminals and databases[cite: 10]. [cite_start]Logistics optimization of the warehouse and product preparation through tagging and security alarming[cite: 11, 12].</p>
             </article>
 
             <article>
-                <header><strong>Sales Assistant</strong> | Snipes, Barcelona</header>
-                <small><i class="fa-regular fa-calendar"></i> December 2024 – August 2025</small>
-                <p>Public attention and sales promotion during periods of high demand. Personalized advice and product replenishment to optimize the store.</p>
+                <header>
+                    <strong>Sales Assistant</strong> | Snipes, Barcelona
+                </header>
+                [cite_start]<small><i class="fa-regular fa-calendar"></i> December 2024 – August 2025 [cite: 13, 15]</small>
+                <p>Public attention and sales promotion during periods of high demand. [cite_start]Personalized advice and product replenishment to optimize the store[cite: 14, 16].</p>
             </article>
 
             <article>
-                <header><strong>Turnaround</strong> | Intercruises Shoreside & Port Services, Barcelona</header>
-                <small><i class="fa-regular fa-calendar"></i> July 2023 – November 2024</small>
-                <p>Embarkation and disembarkation management at international cruise terminals. Direct assistance to global passengers using English as the working language.</p>
+                <header>
+                    <strong>Turnaround</strong> | Intercruises Shoreside & Port Services, Barcelona
+                </header>
+                [cite_start]<small><i class="fa-regular fa-calendar"></i> July 2023 – November 2024 [cite: 17, 18]</small>
+                <p>Embarkation and disembarkation management at international cruise terminals. [cite_start]Direct assistance to global passengers using English as the working language[cite: 19, 20].</p>
             </article>
         </section>
 
@@ -170,17 +197,20 @@
                 <div class="skills">
                     <span class="skill-badge"><strong>Spanish:</strong> Native</span>
                     <span class="skill-badge"><strong>Catalan:</strong> Native</span>
-                    <span class="skill-badge"><strong>English:</strong> B2 Upper Intermediate (Trinity ISE II)</span>
+                    [cite_start]<span class="skill-badge"><strong>English:</strong> B2 Upper Intermediate (Trinity ISE II) [cite: 26]</span>
                 </div>
-                <p><small>Official accreditation of linguistic competence in oral and written comprehension and expression.</small></p>
+                [cite_start]<p><small>Official accreditation of linguistic competence in oral and written comprehension and expression[cite: 27].</small></p>
             </article>
         </section>
 
         <section id="education">
             <h2><i class="fa-solid fa-book-open"></i> Technical Stack & Education</h2>
             <article>
-                <header><strong>BSc in Computer Engineering</strong> | Universidad Pompeu Fabra (UPF)</header>
-                <p>Training focused on algorithms, data structures, and software development.</p>
+                <header>
+                    <strong>BSc in Computer Engineering</strong> | Universidad Pompeu Fabra (UPF)
+                </header>
+                [cite_start]<small><i class="fa-regular fa-calendar"></i> September 2023 – Present [cite: 22, 23, 24]</small>
+                [cite_start]<p>Training focused on algorithms, data structures, and software development[cite: 25].</p>
                 <div class="skills">
                     <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
                     <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
