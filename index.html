@@ -16,20 +16,20 @@
             --primary-hover: #660000 !important;
             --font-family: 'Inter', sans-serif !important;
         }
-
+        
         body { 
             font-family: 'Inter', sans-serif !important;
             background-color: #f8f8f8 !important;
             color: #000000 !important;
-            margin-bottom: 3rem;
+            animation: fadeIn 0.8s ease-out;
         }
 
-        article, section, div, main {
+        article, section, div, main, hgroup {
             background-color: transparent !important;
             background: transparent !important;
+            color: #000000 !important;
             border: none !important;
             box-shadow: none !important;
-            color: #000000 !important;
         }
 
         h1, h2, h3, h4, strong, b { 
@@ -72,7 +72,7 @@
             justify-content: center;
         }
 
-        [role="button"] i, button i {
+        [role="button"] i {
             color: #ffffff !important;
             margin-right: 8px;
         }
@@ -80,14 +80,13 @@
         [role="button"].outline {
             background-color: transparent !important;
             color: #8b0000 !important;
-            border-color: #8b0000 !important;
         }
 
         [role="button"].outline i {
             color: #8b0000 !important;
         }
 
-        .project-card { 
+        .project-card, article { 
             border-left: 5px solid #8b0000 !important; 
             background: #ffffff !important;
             padding: 1.5rem !important;
@@ -118,7 +117,6 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        main { animation: fadeIn 1s ease-out; }
     </style>
 </head>
 <body>
@@ -133,7 +131,7 @@
                 </hgroup>
                 <p>
                     Hybrid profile bridging technical development and user-centered design. 
-                    Proficient in Python, Java, and C, focusing on intuitive digital experiences.
+                    Proficient in Python, Java, and C.
                 </p>
                 <div class="contact-links">
                     <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
@@ -169,12 +167,19 @@
                 <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small>
                 <p>Public attention and sales promotion during high demand periods.</p>
             </article>
+
+            <article>
+                <header><strong>Turnaround</strong> | Intercruises</header>
+                <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small>
+                <p>Management of international cruise terminals and direct passenger assistance in English.</p>
+            </article>
         </section>
 
         <section id="education">
-            <h2><i class="fa-solid fa-book-open"></i> Technical Stack</h2>
+            <h2><i class="fa-solid fa-book-open"></i> Education & Technical Stack</h2>
             <article>
                 <header><strong>BSc in Computer Engineering</strong> | UPF</header>
+                <p>Focused on algorithms, data structures, and software development.</p>
                 <div class="skills">
                     <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
                     <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
@@ -182,6 +187,18 @@
                     <span class="skill-badge"><i class="fa-brands fa-github"></i> Git/GitHub</span>
                     <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</span>
                 </div>
+            </article>
+        </section>
+
+        <section id="languages">
+            <h2><i class="fa-solid fa-language"></i> Languages</h2>
+            <article>
+                <div class="skills">
+                    <span class="skill-badge"><strong>Spanish:</strong> Native</span>
+                    <span class="skill-badge"><strong>Catalan:</strong> Native</span>
+                    <span class="skill-badge"><strong>English:</strong> B2 Upper Intermediate (Trinity ISE II)</span>
+                </div>
+                <p><small>Official accreditation of linguistic competence in oral and written expression.</small></p>
             </article>
         </section>
 
