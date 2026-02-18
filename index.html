@@ -15,67 +15,42 @@
             --primary: #8b0000 !important;
             --primary-hover: #660000 !important;
             --font-family: 'Inter', sans-serif !important;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body { 
             font-family: 'Inter', sans-serif !important;
             background-color: #f8f8f8 !important;
             color: #000000 !important;
+            overflow-x: hidden;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        header, section, footer {
-            animation: fadeInUp 0.6s ease-out forwards;
+        .reveal {
             opacity: 0;
-        }
-
-        header { animation-delay: 0.1s; }
-        #experience { animation-delay: 0.3s; }
-        #languages { animation-delay: 0.5s; }
-        #education { animation-delay: 0.6s; }
-        footer { animation-delay: 0.7s; }
-
-        article, section, div, main, hgroup {
-            background-color: transparent !important;
-            background: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-        }
-
-        article, .project-card { 
-            border-left: 5px solid #8b0000 !important; 
-            background: #ffffff !important;
-            padding: 1.5rem !important;
-            border-radius: 0 8px 8px 0 !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
-            margin-bottom: 1.5rem !important;
+            transform: translateY(30px);
             transition: var(--transition);
         }
 
-        article:hover, .project-card:hover {
-            transform: translateX(8px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        article header {
+        article, section, div, main, hgroup, article header {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
             border-top: none !important;
-            background: transparent !important;
-            padding: 0 !important;
-            margin: 0 0 0.5rem 0 !important;
+            padding-top: 0 !important;
         }
 
         h1, h2, h3, h4, strong, b { color: #8b0000 !important; }
         p, li, span, small, time { color: #000000 !important; }
 
         header { 
-            padding: 2.5rem 0; 
+            padding: 3rem 0; 
             border-bottom: 3px solid #8b0000 !important; 
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             display: flex;
             align-items: center;
             gap: 2rem;
@@ -88,12 +63,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #8b0000 !important;
-            transition: transform 0.5s ease;
         }
-
-        .profile-img:hover { transform: rotate(5deg) scale(1.1); }
-
-        i, .fa-solid, .fa-brands { color: #8b0000 !important; }
 
         [role="button"], button {
             background-color: #8b0000 !important;
@@ -102,25 +72,26 @@
             display: inline-flex;
             align-items: center;
             padding: 0.6rem 1.2rem;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
 
         [role="button"]:hover {
-            filter: brightness(1.2);
-            transform: scale(1.05);
+            transform: translateY(-3px);
             box-shadow: 0 8px 15px rgba(139, 0, 0, 0.3) !important;
         }
 
         [role="button"] i { color: #ffffff !important; margin-right: 8px; }
 
-        [role="button"].outline {
-            background-color: transparent !important;
-            color: #8b0000 !important;
-            border: 2px solid #8b0000 !important;
+        article { 
+            border-left: 5px solid #8b0000 !important; 
+            background: #ffffff !important;
+            padding: 1.5rem !important;
+            border-radius: 0 8px 8px 0 !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+            margin-bottom: 2rem !important;
         }
 
-        [role="button"].outline i { color: #8b0000 !important; }
-
+        /* CÁPSULAS */
         .skill-badge { 
             background: #ffffff !important; 
             color: #000000 !important; 
@@ -131,21 +102,15 @@
             font-weight: 600 !important;
             display: inline-block !important;
             margin: 0 5px 5px 0 !important;
-            transition: var(--transition);
         }
-
-        .skill-badge:hover {
-            background: #8b0000 !important;
-            color: #ffffff !important;
-        }
-
-        .skill-badge:hover i { color: #ffffff !important; }
+        
+        .skill-badge i { color: #8b0000 !important; margin-right: 5px !important; }
     </style>
 </head>
 <body>
     <main class="container">
         
-        <header>
+        <header class="reveal active">
             <img src="perfil.jpg" alt="Nathan García Ramos" class="profile-img">
             <div class="header-content">
                 <hgroup>
@@ -153,8 +118,8 @@
                     <p><strong><i class="fa-solid fa-graduation-cap"></i> 3rd-year Computer Engineering Student @ UPF</strong></p>
                 </hgroup>
                 <p>
-                    Student with a hybrid profile that combines technical rigor with excellent interpersonal skills. 
-                    Great capacity for learning, proactivity, and communicative fluency in international environments.
+                    Student with a hybrid profile combining technical rigor with interpersonal skills. 
+                    Proactive and communicative in international environments.
                 </p>
                 <div class="contact-links">
                     <span><i class="fa-solid fa-location-dot"></i> Barcelona, Spain</span>
@@ -163,35 +128,28 @@
             </div>
         </header>
 
-        <section id="experience">
+        <section id="experience" class="reveal">
             <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
-            
             <article>
-                <header>
-                    <strong>Sales Assistant (Night Logistics)</strong> | JD Sports, Barcelona
-                </header>
-                <small><i class="fa-regular fa-calendar"></i> December 2025 – January 2026</small>
-                <p>Stock management and digital registration using mobile terminals and databases. Logistics optimization of the warehouse and product preparation through tagging and security alarming.</p>
+                <header><strong>Sales Assistant (Night Logistics)</strong> | JD Sports, Barcelona</header>
+                <small><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</small>
+                <p>Stock management and digital registration using mobile terminals and databases. Logistics optimization and merchandise reception.</p>
             </article>
 
             <article>
-                <header>
-                    <strong>Sales Assistant</strong> | Snipes, Barcelona
-                </header>
-                <small><i class="fa-regular fa-calendar"></i> December 2024 – August 2025</small>
-                <p>Public attention and sales promotion during periods of high demand. Personalized advice and product replenishment to optimize the store.</p>
+                <header><strong>Sales Assistant</strong> | Snipes, Barcelona</header>
+                <small><i class="fa-regular fa-calendar"></i> Dec 2024 – Aug 2025</small>
+                <p>Public attention and sales promotion. Personalized advice and product replenishment to optimize the store.</p>
             </article>
 
             <article>
-                <header>
-                    <strong>Turnaround</strong> | Intercruises Shoreside & Port Services, Barcelona
-                </header>
-                <small><i class="fa-regular fa-calendar"></i> July 2023 – November 2024</small>
-                <p>Embarkation and disembarkation management at international cruise terminals. Direct assistance to global passengers using English as the working language.</p>
+                <header><strong>Turnaround</strong> | Intercruises Shoreside & Port Services, Barcelona</header>
+                <small><i class="fa-regular fa-calendar"></i> Jul 2023 – Nov 2024</small>
+                <p>Embarkation management at international terminals. Direct assistance to global passengers in English.</p>
             </article>
         </section>
 
-        <section id="languages">
+        <section id="languages" class="reveal">
             <h2><i class="fa-solid fa-language"></i> Languages</h2>
             <article>
                 <div class="skills">
@@ -199,17 +157,14 @@
                     <span class="skill-badge"><strong>Catalan:</strong> Native</span>
                     <span class="skill-badge"><strong>English:</strong> B2 Upper Intermediate (Trinity ISE II)</span>
                 </div>
-                <p><small>Official accreditation of linguistic competence in oral and written comprehension and expression.</small></p>
+                <p><small>Official accreditation of linguistic competence in comprehension and expression.</small></p>
             </article>
         </section>
 
-        <section id="education">
+        <section id="education" class="reveal">
             <h2><i class="fa-solid fa-book-open"></i> Technical Stack & Education</h2>
             <article>
-                <header>
-                    <strong>BSc in Computer Engineering</strong> | Universidad Pompeu Fabra (UPF)
-                </header>
-                <small><i class="fa-regular fa-calendar"></i> September 2023 – Present</small>
+                <header><strong>BSc in Computer Engineering</strong> | Universidad Pompeu Fabra (UPF)</header>
                 <p>Training focused on algorithms, data structures, and software development.</p>
                 <div class="skills">
                     <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
@@ -221,7 +176,7 @@
             </article>
         </section>
 
-        <footer>
+        <footer class="reveal">
             <h3><i class="fa-solid fa-paper-plane"></i> Let's Connect</h3>
             <div class="contact-links">
                 <a href="CV_Nathan_Garcia_Ramos.pdf" download role="button" class="outline">
@@ -237,5 +192,23 @@
         </footer>
 
     </main>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.15 
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
